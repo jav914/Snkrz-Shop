@@ -1,0 +1,920 @@
+
+*{
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgba(0, 0, 0, 0.856);
+}
+
+:root{
+
+    --brown: #d6d6ba;
+    --black: rgba(0, 0, 0, 0.856);
+}
+
+
+/* De aqui para abajo es la barra de navegacion*/
+
+.logo{
+
+    width: 350px;
+    float: left;
+    margin-left: 00px;
+    margin-top: -33px;
+}
+
+nav{
+    height: 90px;
+    width: auto;
+    border-bottom: 2px solid black;
+    background-color: var(--brown);
+}
+
+.links-barra{
+    
+    float: right;
+    margin-right: 60px;
+    margin-top: 27px;
+}
+
+.links-barra li{
+
+    display: inline-block;
+    margin-left: 57px;
+    font-family: 'Skranji', cursive;
+    font-size: 24px;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.links-barra li a{
+    color: black;
+    padding: 0px 10px;
+    transition: .4s;
+}
+
+.links-barra li a:hover{
+    background-color: var(--black);
+    color: #d6d6ba;
+    border-radius: 10px;
+    
+}
+
+.links-barra .active{
+
+    background-color: var(--black);
+    color: var(--brown);
+    border-radius: 10px;
+}
+
+.menu-desplegable{
+
+    position: relative;
+    display: inline-block;
+}
+
+.boton-menu{
+    background-color: transparent;
+    color: black;
+    padding: 0px 10px;
+    border-radius: 15px;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Skranji', cursive;
+    font-size: 24px;
+    transition: .4s;
+}
+
+.boton-menu:hover,
+.boton-menu:active{
+    background-color: rgba(0, 0, 0, 0.856);
+    color: #d6d6ba;
+}
+
+.contenido-menu{
+
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 20px;
+}
+
+.contenido-menu a {
+
+    color: black;
+    margin: 14px 0px;
+    text-decoration: none;
+    display: block;
+    font-size: 20px;
+}
+
+.contenido-menu a:hover{
+
+    background-color: rgba(0, 0, 0, 0.856);
+        color: #d6d6ba;
+    border-radius: 20px;
+}
+
+.menu-desplegable:hover .contenido-menu{
+
+    display: block;
+}
+
+
+.botoncheck{
+    font-size: 30px;
+    color: black;
+    float: right;
+    line-height: 90px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+
+}
+
+#check{
+
+    display: none;
+
+}
+
+
+@media (max-width: 1050px){
+
+    .links-barra li {
+        font-size: 18px;
+    }
+
+}
+
+@media (max-width: 985px) {
+
+    .botoncheck{
+        display: block;
+    }
+    
+    .logo{
+        width: 210px;
+        margin-top: -6px;
+    }
+
+    .links-barra{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: black;
+        top: 90px;
+        left: -100%;
+        text-align: center;
+        transition: all .6s;
+        margin: auto;
+        z-index: 8;
+    }
+    
+    .links-barra .active {
+    
+        background-color: var(--brown);
+        color: var(--black);
+        border-radius: 10px;
+        padding: 2px 30px;
+    }
+
+    .links-barra li {
+
+        display: block;
+        color: #d6d6ba;
+        margin: 65px auto;
+        line-height: 30px;
+        font-size: 23px;
+        text-align: center;
+        width: 100px;
+    }
+
+        
+
+    .links-barra li a{
+       
+    }
+
+    .links-barra li:hover, 
+    .links-barra li.active{
+
+        background-color: rgba(0, 0, 0, 0.253);
+        text-decoration: underline;
+    }
+
+    #check:checked ~ .links-barra{
+
+        left: 0;
+    }
+
+    .boton-menu{
+        background-color: transparent;
+        color: #d6d6ba;
+        margin-left: 10px;
+    }
+
+    .menu-desplegable{
+        margin: auto;
+        
+    }
+    
+    .contenido-menu{
+        background-color: #d6d6ba;
+        right: -32px;
+        
+    }
+
+
+
+}
+
+
+/* Termina la barra de navegacion */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Pagina de inicio*/
+
+video{
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+    border-radius: 50px;
+}
+
+.texto-zapatillas{
+
+    color: #d6d6ba;
+    padding-top: 80px;
+    text-align: center;
+    font-size: 60px;
+    font-family: 'Trade Winds', cursive;
+}
+
+.masvendidos-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+    height: auto;
+    margin: auto;
+}
+
+.masvendidos-item{
+
+    display: inline-block;
+    width: 220px;
+    padding: 40px 0px 40px 0px;
+    margin-left: 45px;
+    margin-right: 45px;
+    text-align: center;
+    transition: .5s;
+    flex-shrink: 2;
+
+}
+
+.masvendidos-item:hover{
+
+    width: 240px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.masvendidos-item b{
+    display: inline;
+    color: white;
+    font-family: 'Righteous', cursive;
+    font-weight: 200;
+    font-size: 20px;
+    
+}
+
+.masvendidos-item span{
+    color: white;
+    font-size: 19px;
+    
+}
+
+.masvendidos-item-image{
+
+    border-radius: 40%;
+    width: 220px;
+    opacity: 98%;
+    margin-bottom: 10px;
+    transition: .5s;
+}
+
+.masvendidos-item-image:hover{
+
+    width: 240px;
+    box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 1);
+}
+
+
+
+
+.texto-inicio{
+
+    color: #d6d6ba;
+    padding-top: 80px;
+    text-align: center;
+    font-size: 60px;
+    font-family: 'Trade Winds', cursive;
+}
+
+.fotoscolecciones{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+}
+
+.foto-coleccion{
+    width: 400px;
+    padding: 70px;
+    border-radius: 60%;
+    opacity: 80%;
+    transition: .5s;
+    
+}
+
+.foto-coleccion:hover{
+
+    width: 430px;
+}
+
+
+
+
+/*Footer*/
+
+.footer-container img{
+    
+    width: 390px;
+    height: 190px;
+    align-self: center;
+    margin-left: -30px;
+    
+}
+
+.footer-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    background-color: #d6d6ba;
+}
+
+.footer-item{
+
+    list-style: inside;
+    margin-top: 40px;
+    margin-right: 60px;
+    flex-shrink: 2;
+
+}
+
+.footer-item b {
+
+    display: inline-block;
+    width: 280px;
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Trade Winds', cursive;
+    font-size: 21px;
+}
+
+.footer-item ul{
+    
+    margin-top: 10px;
+    font-family: 'Trade Winds', cursive;
+    margin-bottom: 40px;
+}
+
+.footer-item ul li{
+
+    padding-top: 6px;
+    font-size: 19px;
+}
+
+.footer-item ul li a{
+    text-decoration: underline;
+    color: black;
+}
+
+/*Footer*/
+
+
+@media (max-width:1239px){
+
+    .footer-container img{
+        width: 400px;
+        height: 180px;
+        order: 2;
+    }
+
+    .footer-item{
+        order: 1;
+        margin-left: 0px;
+    }
+
+    .footer-list{
+        
+        position: relative;
+
+        
+        
+        
+    }
+
+    .footer-list li{
+
+        
+        font-size: 17px;
+    
+    }
+
+    .footer-item b{
+
+        font-size: 19px;
+        text-align: center;
+    }
+
+    .texto-zapatillas{
+        font-size: 40px;
+    }
+    
+    .masvendidos-item{
+
+        width: 190px;
+
+    }
+
+    .masvendidos-item-image{
+
+        width: 190px;
+    }
+
+    .texto-inicio{
+
+        font-size: 40px;
+    }
+
+    .foto-coleccion{
+
+        width: 350px;
+    }
+
+}
+
+
+
+@media (max-width:909px){
+
+    .footer-container img {
+        width: 260px;
+        height: 135px;
+        order: 2;
+
+    }
+
+    .footer-container{
+
+        flex-direction: column;
+    }
+    
+    .footer-item {
+        order: 1;
+        margin: auto;
+        margin-top: 30px;
+        
+    }
+
+    .footer-list {
+
+        position: relative;
+    }
+
+    .footer-list li {
+        
+        font-size: 15px;
+    }
+
+    .footer-item b {
+
+        width: 240px;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .texto-zapatillas {
+        font-size: 28px;
+    }
+
+    .masvendidos-item {
+
+        width: 80px;
+        padding: 30px 0px 40px 0px;
+        margin-left: 14px;
+        margin-right: 14px;
+    }
+
+    .masvendidos-item:hover{
+        
+        width: 80px;
+    }
+
+    .masvendidos-item b{
+
+        font-size: 12px;
+    }
+
+    .masvendidos-item b:hover{
+        
+        font-size: 12px;
+    }
+
+    .masvendidos-item span{
+
+        font-size: 15px;
+    }
+
+    .masvendidos-item-image {
+
+        width: 80px;
+    }
+
+    .masvendidos-item-image:hover{
+        width: 80px;
+    }
+
+    .texto-inicio {
+
+        font-size: 28px;
+    }
+
+    .fotoscolecciones{
+
+        flex-direction: row;
+        margin-top: 30px;
+        margin-bottom: 70px;
+    }
+    
+    .foto-coleccion {
+
+        width: 120px;
+        padding: 10px;
+    }
+
+    .foto-coleccion:hover{
+        width: 120px;
+    }
+
+
+}
+
+
+
+
+
+/*Pagina de inicio*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* COLECCION NIKE */
+
+.coleccionnike-header{
+    width: 500;
+    height: 220px;
+    opacity: 80%;
+    margin-top: -40px;
+}
+
+
+.boton-volverinicio{
+
+    position: sticky;
+    top: 60px;
+    left: 15px;
+    display: inline-block;
+    font-family: 'Russo One', sans-serif;
+    font-size: 16px;
+    color: var(--black);
+    border-radius: 10px;
+    padding: 5px 10px 5px 10px;
+    background-color: red;
+    margin: 30px 10px 15px 10px;
+    display: inline-block;
+    transition: .4s;
+    opacity: 85%;
+    
+}
+
+.boton-volverinicio:hover {
+    
+    padding: 7px 12px 7px 12px;
+    text-decoration: underline;
+}
+
+
+.nikecolection-introduction{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    border-bottom: 10px white groove;
+    padding-top: 0px;
+    padding-bottom: 60px;
+    
+}
+
+
+.titulo-coleccionnike{
+    width:100%;
+    text-align: center;
+    color: rgb(240, 47, 47);
+    font-family: 'Permanent Marker', cursive;
+    font-size: 50px;
+    text-decoration: underline;
+    order: 1;
+    margin: auto;
+}
+
+.links-modelos{
+    display: inline-block;
+    width: 900px;
+    order: 2;
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+    
+    
+}
+
+.link-nike{
+
+    font-family: 'Russo One', sans-serif;
+    color: var(--black);
+    border-radius: 10px;
+    padding: 5px 10px 5px 10px;
+    background-color: var(--brown);
+    margin: 20px 20px 15px 20px;
+    display: inline-block;
+    transition: .4s;
+
+}
+
+.link-nike:hover{
+
+    padding: 7px 12px 7px 12px;
+    text-decoration: underline;
+}
+
+
+
+.coleccion-container{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    flex-direction: row;
+    width: 80%;
+    margin: auto;
+    margin-top: 70px;
+    border-bottom: 3px red solid;
+    margin-bottom: 130px;
+
+}
+
+.colection-title{
+    color: var(--brown);
+    text-align: center;
+    font-size: 40px;
+    margin-top: 50px;
+    font-family: 'Russo One', sans-serif;
+    text-decoration: underline red;
+
+}
+
+.zapato-coleccion{
+
+    width: 220px;
+    margin: 0px 20px 50px 20px;
+    text-align: center;  
+}
+
+.zapato-coleccion b{
+    color: white;
+}
+
+.zapato-coleccion span{
+    color: white;
+}
+
+.zapato-coleccion img{
+
+    width: 200px;
+    min-width: none;
+    border-radius: 70px;
+    margin-bottom: 15px;
+    opacity: 95%;
+    transition: .4s;
+}
+
+
+.zapato-coleccion img:hover{
+    width: 207px;
+    box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 1);
+}
+
+
+
+
+@media (max-width:1320px){
+
+    .coleccionnike-header {
+        width: 350px;
+        height: 220px;
+        opacity: 80%;
+        margin-top: -40px;
+        }
+    
+    .titulo-coleccionnike{
+        font-size: 45px;
+    }
+
+    .links-modelos{
+
+
+    }
+
+    .boton-volverinicio{
+
+        font-size: 13px;
+        z-index: 3;
+    }
+
+    .colection-title{
+
+    }
+
+    .coleccion-container{
+
+    }
+
+    .zapato-coleccion{
+
+        width: 140px;
+        margin: 15px 30px;
+    }
+
+    .zapato-coleccion img {
+
+        width: 140px;
+        border-radius: 22px;
+    }
+
+    .zapato-coleccion b{
+
+        font-size: 18px;
+    }
+
+    .zapato-coleccion span{
+
+    }
+
+
+}
+
+@media (max-width:987px){
+    .coleccionnike-header {
+        width: 500;
+        height: 220px;
+        opacity: 80%;
+        margin-top: 0px;
+        }
+}
+
+
+
+
+@media (max-width:610px){
+
+    .coleccionnike-header {
+        width: 200px;
+        height: 130px;
+        opacity: 80%;
+        margin-top: 0px;
+        }
+    
+    .nikecolection-introduction{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-top: -60px;
+    }
+    
+    .titulo-coleccionnike {
+        font-size: 25px;
+        margin-top: 20px;
+
+    }
+    
+    .links-modelos {
+
+        font-size: 10px;
+    }
+
+    .link-nike{
+
+        padding: 3px 8px;
+        background-color: var(--brown);
+        margin: 20px 10px;
+    }
+
+    .boton-volverinicio {
+
+        font-size: 9.5px;
+        top: 40px;
+        opacity: 70%;
+    }
+
+    .colection-title {
+
+        font-size: 29px;
+    }
+
+    .coleccion-container {
+
+    }
+
+    .zapato-coleccion {
+
+        width: 65px;
+        margin: 0px 15px 35px 15px;
+
+    }
+
+    .zapato-coleccion img{
+
+        width: 65px;
+    }
+
+    .zapato-coleccion b {
+
+        font-size: 12px;
+    }
+
+    .zapato-coleccion span {
+        font-size: 13px;
+    }
+}
